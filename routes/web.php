@@ -12,3 +12,4 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.home');
 Route::view('/contact-us', 'pages.contact')->name('contact');
 Route::view('/about-us', 'pages.about')->name('about');
+Route::view('/article/{id}', 'pages.article')->name('article');

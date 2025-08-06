@@ -12,7 +12,7 @@
                         <div class="text-left">
                             <h4 class="font-bold">Dummy Post Title 1</h4>
                             <p class="text-gray-600">This is a short description for the dummy post 1.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read more</a>
                         </div>
                     </li>
                     <li class="flex border-b pb-2 items-start">
@@ -20,7 +20,7 @@
                         <div class="text-left">
                             <h4 class="font-bold">Dummy Post Title 2</h4>
                             <p class="text-gray-600">This is a short description for the dummy post 2.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read more</a>
                         </div>
                     </li>
                     <li class="flex border-b pb-2 items-start">
@@ -28,7 +28,7 @@
                         <div class="text-left">
                             <h4 class="font-bold">Dummy Post Title 3</h4>
                             <p class="text-gray-600">This is a short description for the dummy post 3.</p>
-                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read more</a>
                         </div>
                     </li>
                 </ul>
