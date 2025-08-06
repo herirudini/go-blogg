@@ -16,15 +16,14 @@
             </a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="/about" class="hover:text-blue-500">About Us</a></li>
-                    <li><a href="/contact" class="hover:text-blue-500">Contact</a></li>
+                    <li><a href="{{ route('about') }}" class="hover:text-blue-500">About Us</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-blue-500">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="container mx-auto mt-10 px-6 text-center">
-        <h2 class="text-3xl font-bold">Welcome to Our Homepage</h2>
-        <p class="mt-4 text-lg text-gray-600">Discover more about us and get in touch.</p>
+        @yield('content')
     </main>
     <footer class="mt-10 py-6 bg-white text-center shadow-md">
         <p class="text-gray-600">&copy; 2025 Brand. All rights reserved.</p>
