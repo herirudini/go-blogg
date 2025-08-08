@@ -63,5 +63,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Development
 run in terminal: composer run dev
 ctrl+click the link of the: "Server running on [http:xxxxx]"
-
 run migration if database not exist: php artisan migrate
+command to create controller: php artisan make:controller HomeController
