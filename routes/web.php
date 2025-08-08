@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\HomeController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -19,4 +20,5 @@ Route::view('/article/{id}', 'pages.article')->name('article');
 //     $categories = DB::table('categories')->get();
 //     return view('pages.home', ['categories' => $categories]); //we can use the categories in the component as data source
 // });
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+// Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+Route::get('/', [HomeController::class, 'index'])->name('home');
