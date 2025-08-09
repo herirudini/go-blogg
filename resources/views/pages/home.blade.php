@@ -7,36 +7,18 @@
             <x-card>
                 <h3 class="mb-8 text-2xl text-left font-semibold">Latest Articles</h3>
                 <ul class="mt-4 space-y-4">
-                    <li class="flex border-b pb-2 items-start">
-                        <img src="{{ asset('assets/images/landscape-placeholder-svgrepo-com.svg') }}" alt="Post Image 1"
-                            class="w-16 h-16 mr-4 rounded">
-                        <div class="text-left">
-                            <h4 class="font-bold">Dummy Post Title 1</h4>
-                            <p class="text-gray-600">This is a short description for the dummy post 1.</p>
-                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read
-                                more</a>
-                        </div>
-                    </li>
-                    <li class="flex border-b pb-2 items-start">
-                        <img src="{{ asset('assets/images/landscape-placeholder-svgrepo-com.svg') }}" alt="Post Image 2"
-                            class="w-16 h-16 mr-4 rounded">
-                        <div class="text-left">
-                            <h4 class="font-bold">Dummy Post Title 2</h4>
-                            <p class="text-gray-600">This is a short description for the dummy post 2.</p>
-                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read
-                                more</a>
-                        </div>
-                    </li>
-                    <li class="flex border-b pb-2 items-start">
-                        <img src="{{ asset('assets/images/landscape-placeholder-svgrepo-com.svg') }}" alt="Post Image 3"
-                            class="w-16 h-16 mr-4 rounded">
-                        <div class="text-left">
-                            <h4 class="font-bold">Dummy Post Title 3</h4>
-                            <p class="text-gray-600">This is a short description for the dummy post 3.</p>
-                            <a href="{{ route('article', ['id' => 1]) }}" class="text-blue-500 hover:underline">Read
-                                more</a>
-                        </div>
-                    </li>
+                    @foreach($posts as $post)
+                        <li class="flex border-b pb-2 items-start">
+                            <img src="{{ asset('assets/images/landscape-placeholder-svgrepo-com.svg') }}" alt="Post Image 1"
+                                class="w-16 h-16 mr-4 rounded">
+                            <div class="text-left">
+                                <h4 class="font-bold">{{ $post->title }}</h4>
+                                <p class="text-gray-600">{{ $post->content }}</p>
+                                <a href="{{ route('article', ['id' => $post->id]) }}" class="text-blue-500 hover:underline">Read
+                                    more</a>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </x-card>
         </div>
