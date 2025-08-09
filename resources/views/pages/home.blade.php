@@ -28,7 +28,7 @@
                 <h3 class="text-xl text-left font-semibold mb-4">Categories</h3>
                 <ul class="space-y-2 text-left">
                     @foreach($categories as $category)
-                        <li><a href="#" class="text-blue-500 hover:underline">{{ $category->name }}</a></li>
+                        <li><a href="/?category_id={{ $category->id }}" class="text-blue-500 hover:underline">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
             </x-card>
